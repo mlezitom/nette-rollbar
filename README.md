@@ -4,11 +4,14 @@ Usage:
 
 config.neon:
 
+```neon
 parameters:
-	rollback:
-		key: f7461a0672dd4cb3961b5c7ec1711d17
-		env: dev
-services:	
-	tracy.logger:
-		class: Mlezitom\NetteRollbar\Logger(%rollback.key%, %rollback.env%)
+    rollback:
+        key: a1b2c3d4e5f6a7b8c9d0a1b2c3d4e5f6
+        env: dev
 
+services:    
+    tracy.logger:
+        class: Mlezitom\NetteRollbar\Logger(%rollback.key%, %rollback.env%, @security.user::getIdentity())
+
+```
