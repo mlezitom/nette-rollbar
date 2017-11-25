@@ -1,0 +1,17 @@
+{
+    "name": "mlezitom/nette-rollbar",
+    "description": "Nette logger for Rollbar logger service",
+    "type": "library",
+    "require": {
+        "tracy/tracy": "^2.4"
+    },
+    "require-dev": {
+        "rollbar/rollbar": "^1.3"
+    },
+    "authors": [
+        {
+            "name": "Tomas Mleziva",
+            "email": "mlezivat@gmail.com"
+        }
+    ]
+}
