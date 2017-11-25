@@ -14,14 +14,16 @@ class Logger implements ILogger
     /**
      * @param Rollbar $client
      */
-    public function __construct($rollbarKey, $env, IIdentity $identity)
+    public function __construct($rollbarKey, $env, IIdentity $identity, $autoBindToTracy = true)
     {
         $this->identity = $identity;
         Rollbar::init([
             'access_token' => $rollbarKey,
             'environment' => $env,
         ]);
-        $this->bindToTracy();
+        if ($autoBindToTracy) {
+            $this->bindToTracy();
+        }
     }
 
 
