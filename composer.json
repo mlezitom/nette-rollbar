@@ -2,10 +2,10 @@
     "name": "mlezitom/nette-rollbar",
     "description": "Nette logger for Rollbar logger service",
     "type": "library",
-    "version": "0.0.9",
+    "version": "0.1.1",
     "require": {
-        "tracy/tracy": "^2.4",
-        "nette/security": "^2.4",
+        "tracy/tracy": "^2.3",
+        "nette/security": "^2.3",
         "rollbar/rollbar": "^1.3"
     },
     "require-dev": {

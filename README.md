@@ -6,12 +6,12 @@ config.neon:
 
 ```neon
 parameters:
-    rollback:
+    rollbar:
         key: a1b2c3d4e5f6a7b8c9d0a1b2c3d4e5f6
         env: dev
 
 services:    
     tracy.logger:
-        class: Mlezitom\NetteRollbar\Logger(%rollback.key%, %rollback.env%, @security.user::getIdentity())
+        class: Mlezitom\NetteRollbar\Logger(%rollbar.key%, %rollbar.env%, @security.user::getIdentity())
 
 ```
